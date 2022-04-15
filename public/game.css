@@ -1,0 +1,147 @@
+body {
+    font-family: 'Electrolize', sans-serif;
+    text-align: center;
+    margin: 0;
+    background: radial-gradient(circle, #0077ea, #1f4f96, #1b2949, #000);
+    color: whitesmoke;
+    height: 100vh;
+}
+
+
+/* game box */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+    color: palevioletred;
+}
+
+input {
+    display: inline;
+    padding: 5px;
+    margin: 10px 10px 0 0;
+    height: 20px;
+}
+
+button {
+    height: 28px;
+}
+
+.button-wordsLeft {
+    background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    padding: 5px;
+}
+
+
+/* game instruction */
+
+.game-instruction {
+    text-align: center;
+    color: whitesmoke;
+}
+
+
+/* game timer */
+
+#game-timer {
+    border: 2px solid red;
+    height: 30px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+
+/* words  display box */
+
+.sub-container {
+    display: flex;
+    width: 50%;
+    max-width: 1200px;
+}
+
+.game-box {
+    border: 2px solid black;
+    height: 300px;
+    padding-left: 5px;
+    overflow: auto;
+}
+
+.game-header {
+    margin-top: 10px;
+    font-size: 23px;
+    text-align: center;
+}
+
+.game-feed {
+    flex-direction: column;
+    align-items: left;
+}
+
+.game-input {
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.game-input-name {
+    width: 20%;
+}
+
+.game-input-msg {
+    width: 65%;
+}
+
+.word-background {
+    background: #000;
+    margin: 0 2px;
+    padding: 0 3px;
+    border: solid 2px green;
+    line-height: 1.2em;
+    height: 1.2em
+}
+
+p {
+    overflow-wrap: break-word;
+    color: whitesmoke;
+}
+
+#user-name {
+    font-weight: bold;
+}
+
+
+/* scores */
+
+#user-score {
+    color: white;
+    background-color: palevioletred;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+#total-score {
+    visibility: hidden;
+}
+
+
+/* game start button */
+
+#start-button {
+    background: green;
+}
+
+@media (max-width: 800px) {
+    .sub-container {
+        width: 75%;
+    }
+}

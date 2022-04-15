@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- stylesheet -->
+    <link href="game.css" rel="stylesheet">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Electrolize&family=Italiana&display=swap" rel="stylesheet">
+    </link>
+
+    <!-- title -->
+    <title> Game Page</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Memo
+            <span class="txt-type" data-wait="3000" data-words='["RICE ❌","RIZE ❌","ICE ✅"]'></span>
+        </h1>
+
+        <!-- instructions -->
+        <div class="game-instruction">
+            <p id="info"> 💡 Commit to memory as much words as you can</p>
+        </div>
+
+        <!-- timer -->
+        <div class="game-memory-timer">
+            <p>
+                <h2 id="game-timer">00:00</h2>
+            </p>
+        </div>
+
+        <!-- wordsleft -->
+        <div id="game-words-left">
+            <h2 class="button-wordsLeft">Words Left: <span id="words-left">0</span></h2>
+        </div>
+
+        <!-- game words display window -->
+        <div class="sub-container game-feed">
+            <div class="game-header" id="game-header-msg">Game Box</div>
+            <div class="game-box" id="game-box-msgs"></div>
+        </div>
+
+        <!-- game play info -->
+        <form class="sub-container game-input" id="game-form">
+            <p> <span id="user-name"></span> <span id="user-score">0</span></p>
+
+            <!-- recall input area -->
+            <input type="text" class="game-input-msg" id="word-input" placeholder="Enter the words you remember" required />
+
+            <button id="send-button">Send</button>
+        </form>
+
+        <!-- game start button -->
+        <button id="start-button">Start Game</button>
+
+        <!-- game total score -->
+        <h2>Total Score: <span id="game-score">0</span></h2>
+    </div>
+
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script src="game.js"></script>
+</body>
+
+</html>
